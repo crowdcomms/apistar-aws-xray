@@ -1,0 +1,15 @@
+version: '2'
+services:
+  xray:
+    image: crowdcomms/apistar_xray_middleware
+#    env_file:
+#      - .env
+    build:
+      context: .
+      args:
+        GITHUB_TOKEN: ${GITHUB_TOKEN}
+    volumes:
+      - .:/code
+      - ~/.aws/:/root/.aws
+    working_dir: /code
+
