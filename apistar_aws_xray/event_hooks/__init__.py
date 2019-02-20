@@ -25,13 +25,18 @@ class AWSXrayEventHook:
         xray_header = construct_xray_header(headers)
 
         name = calculate_segment_name(host, self._recorder)
+        
+        sampling_req = {
+            'host': host,
+            'method': method,
+            'path': path,
+            'service': name,
+        }
 
         sampling_decision = calculate_sampling_decision(
             trace_header=xray_header,
             recorder=self._recorder,
-            service_name=host,
-            method=method,
-            path=path
+            sampling_req=sampling_req,
         )
 
         segment = self._recorder.begin_segment(
