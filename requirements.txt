@@ -12,7 +12,7 @@ idna==2.7
 ipdb==0.10.3
 ipython==5.5.0
 ipython-genutils==0.2.0
-Jinja2==2.10
+Jinja2==2.11.3
 jsonpickle==0.9.6
 MarkupSafe==1.0
 more-itertools==4.3.0
