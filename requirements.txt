@@ -10,7 +10,7 @@ decorator==4.1.2
 future==0.16.0
 idna==2.7
 ipdb==0.10.3
-ipython==5.5.0
+ipython==7.16.3
 ipython-genutils==0.2.0
 Jinja2==2.10
 jsonpickle==0.9.6
